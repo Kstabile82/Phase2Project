@@ -8,6 +8,9 @@ function ExerciseForm ({ exercises, user }) {
     function handleSubmit(e) {
         e.preventDefault();
         setSubmitted("true")
+        // filtered results new state item
+        // setCategory("")
+        // setDifficulty("")
     }
     function handleChange(e) {
         e.preventDefault();
@@ -23,6 +26,7 @@ function ExerciseForm ({ exercises, user }) {
                 <h4>Filter By:</h4>
                     <div className="category">
                         <form className="exerciseForm" onSubmit={handleSubmit}>
+                            {/* <select name="category" value={category} id="category" onChange={handleChange}> */}
                             <select name="category" id="category" onChange={handleChange}>
                             <option value="" hidden>Category</option>
                             <option value="Cardio">Cardio</option>
@@ -40,11 +44,11 @@ function ExerciseForm ({ exercises, user }) {
                         <button>Submit</button>
                         <div>
                             {isSubmitted === "true" ? <FilterResults 
-                        category={category} 
-                        difficulty={difficulty}
-                        isSubmitted={isSubmitted} 
-                        exercises={exercises}
-                        user={user} /> : null}
+                                category={category} 
+                                difficulty={difficulty}
+                                isSubmitted={isSubmitted} 
+                                exercises={exercises}
+                                user={user} /> : null}
                         </div>
                     </form>
                     </div>

@@ -3,7 +3,16 @@ import ReactDOM from 'react-dom';
 import App from "./Components/App";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// import { render } from 'react-dom';
+// import { transitions, positions, Provider as AlertProvider } from 'react-alert';
+// import AlertTemplate from 'react-alert-template-basic'
 
+// const Root = () => (
+//   <AlertProvider template={AlertTemplate} >
+//     <App />
+//   </AlertProvider>
+// )
+// render(<Root />, document.getElementById('root'))
 ReactDOM.render(
   <React.StrictMode>
     <App />

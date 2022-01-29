@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-function SaveNewWorkout({ exerciseList, exercises, user }) {
+
+function SaveNewWorkout({ exerciseList, user, exercises }) {
     const [workouts, setWorkouts] = useState([])
     const [saved, setSaved] = useState(false);
    let workoutArr = [];

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ExerciseContainer from "./ExerciseContainer";
 import RenderUserWorkouts from "./RenderUserWorkouts";
 
-function Userpage() {
+function Userpage({ exercises }) {
 const [inputname, setInputName] = useState("");
 const [userData, setUserData] = useState([]);
 const [user, setUser] = useState([]);
@@ -39,7 +39,7 @@ const [nextStep, setNextStep] = useState("")
                     <button id="createnew" name="nextsteps" onClick={handleNext}>Create a New Workout</button>
                     <button id="seeworkouts" name="nextsteps" onClick={handleNext}>See My Workout List</button>
                 </form>
-                <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} /> : null } </div>
+                <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} exercises={exercises}/> : null } </div>
                 <div >{(nextStep) === "seeworkouts" ? <RenderUserWorkouts user={user} /> : null }</div>
             </div>
         )

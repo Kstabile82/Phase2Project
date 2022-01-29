@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Dashboard from "./Dashboard";
 
 function AddNewExercise() { 
     const [added, setAdded] = useState(false);
@@ -9,6 +10,7 @@ function AddNewExercise() {
     if (added === true) {
         return (
             <div>Thanks! Your exercise has been added.
+                <Dashboard />
             </div>
         )
     }
@@ -34,7 +36,8 @@ function AddNewExercise() {
         body: JSON.stringify({
               name,
               category,
-              difficulty
+              difficulty,
+              likes: 0,
         }),
      })
         .then((r) => r.json())
