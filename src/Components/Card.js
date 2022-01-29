@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-function Card({ exercise, workout }) {
+function Card({ exercise }) {
     const [isHidden, setIsHidden] = useState(true);
     function handleClick(e) {
         setIsHidden(false);
-        e.target.parentElement.parentElement.remove();
+        // e.target.parentElement.parentElement.remove();
     }
  return (
-     <div style={{visibility: isHidden ? 'visible' : 'hidden' }}>
+    <div style={{display: isHidden ? 'visible' : 'none' }}>
          <p>{exercise.name}</p>
          <p>{exercise.difficulty}</p>
          <p>{exercise.likes}</p>

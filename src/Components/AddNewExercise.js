@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 
 function AddNewExercise() { 
-    const [added, setAdded] = useState(false);
+    const [added, setAdded] = useState("");
     let name = "";
     let category = "";
     let difficulty = "";
-    
-    if (added === true) {
-        return (
-            <div>Thanks! Your exercise has been added.
-                <Dashboard />
-            </div>
-        )
-    }
+    let successText = "Thanks! Your exercise has been added to the database.";
+    let errorText = "You didn't complete all the fields, please try again.";
     function handleAdd(e) {
         e.preventDefault();
         if (e.target.name === "name") {
@@ -28,25 +22,32 @@ function AddNewExercise() {
     }
     function handleSubmit(e) {
         e.preventDefault();
-        fetch ("http://localhost:3000/exercises", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-        body: JSON.stringify({
-              name,
-              category,
-              difficulty,
-              likes: 0,
-        }),
-     })
-        .then((r) => r.json())
-        setAdded(true);
-    }
+        if (category === "" || difficulty === "" || name === "") {
+            setAdded("false") //How do I reset the form or go back so it can be submitted once missing info is added? 
+        }
+        else {
+            fetch ("http://localhost:3000/exercises", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                name,
+                category,
+                difficulty,
+                likes: 0,
+                }),
+                })
+            .then((r) => r.json())
+            setAdded("true");
+       }
+     }  
     return (
         <div className="add-exercise-form">
             <h1>Add New Exercise</h1>
             <form onSubmit={handleSubmit}>
+            {added === "true" ? <Dashboard theText={successText} /> : null }
+            {added === "false" ? <Dashboard theText={errorText} /> : null}
                 <input onChange={handleAdd}
                 type="text"
                 name="name"

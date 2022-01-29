@@ -32,8 +32,11 @@ function SaveNewWorkout({ exerciseList, user, exercises }) {
     }
     return (
         <div>
-                <input type="text" id="workoutname"></input>
-                <button onClick={handleSave}>Save As</button>   
+                <label>Save As: 
+                    <input type="text" id="workoutname" placeholder="Workout Name"
+></input>
+                </label>
+                <button onClick={handleSave}>Submit</button>   
         </div>
     )
 }

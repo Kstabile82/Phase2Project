@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Userpage from "./Userpage";
 import ExerciseContainer from "./ExerciseContainer";
-import Dashboard from "./Dashboard";
+import NewUser from "./NewUser";
 
 
 function Header() {
@@ -14,13 +14,15 @@ useEffect(() => {
         setExercises(currentExercises);
     });
  },[]);
-
     function handleChange(e) {
             if (e.target.id === "login") {
                 setNextPage("userpage")
             }
-            else {
+            else if (e.target.id === "browse") {
                 setNextPage("browse")
+            }
+            else {
+                setNextPage("newuser") 
             }
     }
     return (
@@ -33,12 +35,15 @@ useEffect(() => {
                         <input type="radio" id="login" name="selection" onChange={handleChange}></input>
                     Log In </label>
                     <label>
+                        <input type="radio" id="newuser" name="selection" onChange={handleChange}></input>
+                    Create New User </label>
+                    <label>
                         <input type="radio" id="browse" name="selection" onChange={handleChange}></input>
                     Browse </label>
                 </div>
             </form>
-            <Dashboard />
                 <div >{(nextPage) === "userpage" ? <Userpage exercises={exercises} /> : null }</div>
+                <div> {(nextPage) === "newuser" ? <NewUser exercises={exercises} /> : null }</div>
                 <div >{(nextPage) === "browse" ? <ExerciseContainer exercises={exercises}/> : null }</div>
         </header>
     );

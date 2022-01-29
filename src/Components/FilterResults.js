@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SaveNewWorkout from "./SaveNewWorkout";
 
 function FilterResults({ category, difficulty, exercises, isSubmitted, user }) {
-    console.log(category, difficulty)
     const [addedExercises, setAddedExercises] = useState([]);
     const [matches, setMatches] = useState([]);
     const [checked, setChecked] = useState(false);
@@ -12,13 +11,9 @@ function FilterResults({ category, difficulty, exercises, isSubmitted, user }) {
               if (!matches.includes(exercise)) {
                   setMatches([...matches, exercise])
                }
-                    // return exercise
-
             }
         })
      }
-     console.log(matches)
-
     function handleClick(e) {
         if (e.target.className === "likes") { 
             matches.map(match => { 

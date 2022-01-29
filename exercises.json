@@ -5,45 +5,45 @@
       "name": "karina",
       "workouts": [
         {
-        "title": "legs",
-        "workout": [
-          {
-            "name": "Glute Kickbacks",
-            "category": "Lower Body",
-            "difficulty": "Intermediate",
-            "id": 11,
-            "likes": 10
-          },
-          {
-            "name": "Squat",
-            "category": "Lower Body",
-            "difficulty": "Intermediate",
-            "id": 10,
-            "likes": 8
-          },
-          {
-            "id": 5,
-            "category": "Lower Body",
-            "name": "Lateral Lunges",
-            "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-            "difficulty": "Intermediate",
-            "likes": 9
-          }
-        ]
-      },
-      {
-        "title": "bunz",
-        "workout": [
-          {
-            "name": "Glute Kickbacks",
-            "category": "Lower Body",
-            "difficulty": "Intermediate",
-            "id": 11,
-            "likes": 10
-          }
-        ]
-      }
-     ]
+          "title": "legs",
+          "workout": [
+            {
+              "name": "Glute Kickbacks",
+              "category": "Lower Body",
+              "difficulty": "Intermediate",
+              "id": 11,
+              "likes": 10
+            },
+            {
+              "name": "Squat",
+              "category": "Lower Body",
+              "difficulty": "Intermediate",
+              "id": 10,
+              "likes": 8
+            },
+            {
+              "id": 5,
+              "category": "Lower Body",
+              "name": "Lateral Lunges",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "Intermediate",
+              "likes": 9
+            }
+          ]
+        },
+        {
+          "title": "bunz",
+          "workout": [
+            {
+              "name": "Glute Kickbacks",
+              "category": "Lower Body",
+              "difficulty": "Intermediate",
+              "id": 11,
+              "likes": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 101,
@@ -63,93 +63,93 @@
   "exercises": [
     {
       "id": 1,
-      "category": "Cardio",
+      "category": "cardio",
       "name": "Skaters",
       "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2021/04/skater-jump-exercise-demonstration.jpg?itok=pwn1FZ3v",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 43
     },
     {
       "id": 2,
-      "category": "Cardio",
+      "category": "cardio",
       "name": "Burpees",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 3
     },
     {
       "id": 3,
-      "category": "Lower Body",
+      "category": "lower body",
       "name": "Squats",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 11
     },
     {
       "id": 4,
-      "category": "Lower Body",
+      "category": "lower body",
       "name": "Stationary Lunges",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 8
     },
     {
       "id": 5,
-      "category": "Lower Body",
+      "category": "lower body",
       "name": "Lateral Lunges",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 9
     },
     {
       "id": 6,
-      "category": "Upper Body",
+      "category": "upper body",
       "name": "Bicep Curls",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 9
     },
     {
       "id": 7,
-      "category": "Upper Body",
+      "category": "upper body",
       "name": "Tricep Kickbacks",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 5
     },
     {
       "id": 8,
-      "category": "Core",
+      "category": "core",
       "name": "Crunches",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "likes": 3
     },
     {
-      "category": "Upper Body",
+      "category": "upper body",
       "name": "Pushups",
-      "difficulty": "Intermediate",
+      "difficulty": "intermediate",
       "id": 9,
       "likes": 6
     },
     {
       "name": "Squat",
-      "category": "Lower Body",
-      "difficulty": "Intermediate",
+      "category": "lower body",
+      "difficulty": "intermediate",
       "id": 10,
       "likes": 8
     },
     {
       "name": "Glute Kickbacks",
-      "category": "Lower Body",
-      "difficulty": "Intermediate",
+      "category": "lower body",
+      "difficulty": "intermediate",
       "id": 11,
       "likes": 10
     },
     {
       "name": "Tricep Dips",
-      "category": "Upper Body",
-      "difficulty": "Intermediate",
+      "category": "upper body",
+      "difficulty": "intermediate",
       "id": 12,
       "likes": 5
     },
@@ -159,6 +159,27 @@
       "difficulty": "intermediate",
       "likes": 0,
       "id": 13
+    },
+    {
+      "name": "Kettlebell Swings",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 6,
+      "id": 14
+    },
+    {
+      "name": "Leg lifts",
+      "category": "lower body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "Preacher Curl",
+      "category": "upper body",
+      "difficulty": "advanced",
+      "likes": 1,
+      "id": 16
     }
   ]
 }
