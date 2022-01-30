@@ -32,7 +32,7 @@ function SaveNewWorkout({ exerciseList, user, exercises }) {
     }
     return (
         <div>
-                <label>Save As: 
+                <label>When your workout is complete, save it here:  
                     <input type="text" id="workoutname" placeholder="Workout Name"
 ></input>
                 </label>

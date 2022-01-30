@@ -31,7 +31,6 @@ function ExerciseForm ({ exercises, user }) {
               })
         }
         setMatches(matchArr);
-
     }
     function handleChange(e) { //setting the category & difficulty to match input selections
         e.preventDefault();
@@ -42,7 +41,6 @@ function ExerciseForm ({ exercises, user }) {
             setDifficulty(e.target.value);
         }
     }
-
     function handleClick(e) {
         if (e.target.className === "likes") { 
             matches.map(match => { 
@@ -88,10 +86,9 @@ function ExerciseForm ({ exercises, user }) {
         <button id={addedEx} className="delete" onClick={handleDelete}>x</button>
         </li> 
     );
-    
         return (
             <div>
-                <h4>Filter By:</h4>
+                <h3>Filter By:</h3>
                     <div className="category">
                         <form className="exerciseForm" onSubmit={handleSubmit}>
                             {/* <select name="category" value={category} id="category" onChange={handleChange}> */}
@@ -110,31 +107,14 @@ function ExerciseForm ({ exercises, user }) {
                         </select>
                         <br></br>
                         <button>Submit</button>
-                        {/* <div>
-                        <ul>{matches.map(match => (
-                                <li className={match.name} key={match.id}>{match.name}
-                                <br></br>
-                                    <button className="likes" value={match.likes} onClick={handleClick}>Likes: {match.likes}</button>
-                                    <button className="add" onClick={handleClick}>Add to List</button>
-                                </li>
-                            )) } 
-                            </ul>   */}
                             <div className="popularity">
                                     <label className="sortbylikes">Sort By Likes
                                         <input id="sort" type="checkbox" checked={checked} onChange={handleSortByLikes}></input>
                                     </label>
-                            {/* </div>  */}
-                            {isSubmitted === "true" ? <FilterResults 
-                                matches={matches}
-                                exercises={exercises}
-                                exerciseList={exerciseList}
-                                user={user} /> : null}
                             {isSubmitted === "false" ? <Dashboard theText={errorText} /> : null}
-                        </div>
-                    </form>
-                    <h2>My Workout:</h2>
+                            </div>
+                        </form>
                                 <div>
-                                
                                     <ul>{matches.map(match => (
                                         <li className={match.name} key={match.id}>{match.name}
                                         <br></br>
@@ -142,11 +122,11 @@ function ExerciseForm ({ exercises, user }) {
                                         <button className="add" onClick={handleClick}>Add to List</button>
                                         </li>
                                         )) } </ul> 
+                                    <h3>My Workout: </h3>
                                      <ul>{exerciseList}</ul>
-                                        {user != undefined ? <SaveNewWorkout user={user} exerciseList={exerciseList} exercises={exercises} /> : null}
+                                        {user != undefined && exerciseList.length > 0 ? <SaveNewWorkout user={user} exerciseList={exerciseList} exercises={exercises} /> : null}
                                  </div>
                     </div>
-                    <br></br>
            </div>
         );
 }

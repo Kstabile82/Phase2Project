@@ -44,7 +44,7 @@ function AddNewExercise() {
      }  
     return (
         <div className="add-exercise-form">
-            <h1>Add New Exercise</h1>
+            <h3>Add New Exercise</h3>
             <form onSubmit={handleSubmit}>
             {added === "true" ? <Dashboard theText={successText} /> : null }
             {added === "false" ? <Dashboard theText={errorText} /> : null}
