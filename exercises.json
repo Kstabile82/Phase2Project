@@ -5,41 +5,89 @@
       "name": "karina",
       "workouts": [
         {
-          "title": "legs",
+          "id": 1001,
+          "title": "Arm Day",
           "workout": [
             {
-              "name": "Glute Kickbacks",
-              "category": "Lower Body",
-              "difficulty": "Intermediate",
-              "id": 11,
-              "likes": 10
-            },
-            {
-              "name": "Squat",
-              "category": "Lower Body",
-              "difficulty": "Intermediate",
-              "id": 10,
-              "likes": 8
-            },
-            {
-              "id": 5,
-              "category": "Lower Body",
-              "name": "Lateral Lunges",
+              "id": 6,
+              "category": "upper body",
+              "name": "Bicep Curls",
               "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
-              "difficulty": "Intermediate",
+              "difficulty": "intermediate",
               "likes": 9
+            },
+            {
+              "id": 7,
+              "category": "upper body",
+              "name": "Tricep Kickbacks",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "intermediate",
+              "likes": 5
+            },
+            {
+              "category": "upper body",
+              "name": "Pushups",
+              "difficulty": "intermediate",
+              "id": 9,
+              "likes": 6
+            },
+            {
+              "name": "Tricep Dips",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "id": 12,
+              "likes": 5
+            },
+            {
+              "name": "Tricep pressdowns",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "likes": 0,
+              "id": 18
+            },
+            {
+              "name": "Hammer curls",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "likes": 0,
+              "id": 19
             }
           ]
         },
         {
-          "title": "bunz",
+          "id": 1002,
+          "title": "Cardio Core",
           "workout": [
             {
-              "name": "Glute Kickbacks",
-              "category": "Lower Body",
-              "difficulty": "Intermediate",
-              "id": 11,
-              "likes": 10
+              "id": 1,
+              "category": "cardio",
+              "name": "Skaters",
+              "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2021/04/skater-jump-exercise-demonstration.jpg?itok=pwn1FZ3v",
+              "difficulty": "intermediate",
+              "likes": 43
+            },
+            {
+              "id": 2,
+              "category": "cardio",
+              "name": "Burpees",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "intermediate",
+              "likes": 3
+            },
+            {
+              "id": 8,
+              "category": "core",
+              "name": "Crunches",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "intermediate",
+              "likes": 4
+            },
+            {
+              "name": "Stability Ball Crunches",
+              "category": "core",
+              "difficulty": "beginner",
+              "likes": 0,
+              "id": 17
             }
           ]
         }
@@ -48,15 +96,17 @@
     {
       "id": 101,
       "name": "dexter",
-      "workouts": [
-        "Leg Day"
-      ]
+      "workouts": []
     },
     {
       "id": 102,
       "name": "Dolly",
       "workouts": [
-        "Cardio Sculpt"
+        {
+          "id": 1021,
+          "title": "Cardio Sculpt",
+          "workout": []
+        }
       ]
     }
   ],

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import Dashboard from "./Dashboard";
+//problem here. i dont want to replace the workout, i just want to add to the list and include title. 
+//how do i do that since its a nested object in json? 
 
 function SaveNewWorkout({ exerciseList, user, exercises }) {
     const [workouts, setWorkouts] = useState([])
     const [saved, setSaved] = useState(false);
-   let workoutArr = [];
+    let success = "Your workout was saved!"
+    let workoutArr = [];
    exerciseList.filter(ex => {
      exercises.map(exercise => {
          if (exercise.name === ex.key) {
@@ -11,6 +15,7 @@ function SaveNewWorkout({ exerciseList, user, exercises }) {
          }
  })
 })
+
     function handleSave(e) {
        let workoutName = e.target.parentElement.firstChild.value;
        let workout = workoutArr;
@@ -20,10 +25,11 @@ function SaveNewWorkout({ exerciseList, user, exercises }) {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        "workouts": {
-                            title: workoutName,
-                            workout: workout,
-                        }
+                       workouts: [ {
+                            "title": workoutName,
+                            "workout": workout,
+                          }
+                        ],
                     }),
                 })
                 .then((r) => r.json())
@@ -32,11 +38,12 @@ function SaveNewWorkout({ exerciseList, user, exercises }) {
     }
     return (
         <div>
-                <label>When your workout is complete, save it here:  
-                    <input type="text" id="workoutname" placeholder="Workout Name"
-></input>
-                </label>
-                <button onClick={handleSave}>Submit</button>   
+                When your workout is complete, save it here:  
+                    <input type="text" id="workoutname" placeholder="Workout Name">
+                    </input>
+               
+                <button onClick={handleSave}>Submit </button>   
+                {saved === true ? <Dashboard theText={success} /> : null} 
         </div>
     )
 }

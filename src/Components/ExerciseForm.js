@@ -1,6 +1,5 @@
 import React, { useState } from "react"; 
 import Dashboard from "./Dashboard"
-import FilterResults from "./FilterResults";
 import SaveNewWorkout from "./SaveNewWorkout";
 
 function ExerciseForm ({ exercises, user }) {   
