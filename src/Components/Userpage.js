@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import ExerciseContainer from "./ExerciseContainer";
-import RenderUserWorkouts from "./RenderUserWorkouts";
+import Dashboard from "./Dashboard";
+import Welcomepage from "./Welcomepage";
 
-function Userpage({ exercises }) {
+function Userpage() {
 const [inputname, setInputName] = useState("");
+let goodText = "Thank you, your username has been accepted!"
+let failText = "You didn't enter anything."
+let noMatchText = "Sorry, that username isn't in our database. Please try again or create a new one."
+let takenUserName = "Sorry, that username is already taken. Please try something more unique."
+const [added, setAdded] = useState("");
+const [user, setUser] = useState({});
+let name = "";
+let workouts = [];
 const [userData, setUserData] = useState([]);
-const [user, setUser] = useState([]);
-const [nextStep, setNextStep] = useState("")
     useEffect(() => {
         fetch("http://localhost:3000/users")
         .then((r) => r.json())
@@ -15,41 +21,86 @@ const [nextStep, setNextStep] = useState("")
           })
      },[]);
     function handleName(e) {
-        e.preventDefault();
-        setInputName(e.target.parentElement.firstChild)
+       e.preventDefault();
+       setAdded("")
+       setInputName(e.target.parentElement.firstChild.nextSibling.value);
+        if (inputname === "") {
+            setAdded("false");
+        }
             userData.map(listItem =>  {
-                if (listItem.name.toLowerCase() === inputname.toLowerCase()) {
+                if (listItem.name === inputname) { //need toLowerCase()
                     setUser(listItem)
+                }
+                else {
                 }
             })
     }
-    function handleNext(e) {
+    function handleAdd(e) {
         e.preventDefault();
-        if (e.target.id === "createnew") {
-            setNextStep(e.target.id)
+        setAdded("");
+        // name = e.target.firstChild.nextSibling.value;
+        name = e.target.value;
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+         if (name === "") {
+            setAdded("false")
+         } 
+         else {
+            let nameMatch = userData.find(user => user.name === name); 
+            if (nameMatch === undefined) {
+                fetch ("http://localhost:3000/users", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                    name,
+                    workouts,
+                    }),
+                })
+                .then((r) => r.json())
+                setAdded("true");
+                setUser({
+                    "name": name, 
+                    "workouts": []
+                }); 
+            }
+            else {
+                setAdded("taken")
+            }
         }
-          else {
-            setNextStep("seeworkouts")
-          }        
     }
-    if (user.name !== undefined) {
-        return (
-            <div>Welcome, {user.name}! 
-                <form>What would you like to do?
-                    <button id="createnew" name="nextsteps" onClick={handleNext}>Create a New Workout</button>
-                    <button id="seeworkouts" name="nextsteps" onClick={handleNext}>See My Workout List</button>
-                </form>
-                <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} exercises={exercises}/> : null } </div>
-                <div >{(nextStep) === "seeworkouts" ? <RenderUserWorkouts user={user} /> : null }</div>
-            </div>
-        )
-    }
+    //use css to make the visibility of forms depend on clicked
     return (
         <div>
-            <form onSubmit={handleName}>Username:
-                <input type="text" id="inputname" onChange={(e) => setInputName(e.target.value)}></input>  
-                <button>Enter</button>   
+            <form onSubmit={handleName}> 
+                User Login
+                <input 
+                type="text" 
+                id="inputname" 
+                placeholder="Enter your username"
+                onChange={(e) => setInputName(e.target.value)}></input>  
+                <button>Enter</button>
+                {added === "false" ? <Dashboard theText={failText} /> : null }
+                {/* {added === "mismatch" ? <Dashboard theText={noMatchText} /> : null } */}
+            </form>
+            <form onSubmit={handleSubmit}>
+                Create New User
+                <input 
+                type="text"
+                name="username"
+                placeholder="Pick a unique username"
+                onChange={handleAdd}
+                ></input>                
+                <button>Enter</button> 
+                {added === "true" ? <Dashboard theText={goodText} /> : null } 
+                {/* ^^how do i jump to the Header or ExerciseContainer and pass in user?  */}
+                {added === "false" ? <Dashboard theText={failText} /> : null }
+                {added === "taken" ? <Dashboard theText={takenUserName} /> : null }
             </form> 
+            {user ? <Welcomepage user={user} /> : null}
         </div>
     )
 }

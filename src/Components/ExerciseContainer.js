@@ -3,6 +3,7 @@ import ExerciseForm from "./ExerciseForm";
 import AddNewExercise from "./AddNewExercise";
 
 function ExerciseContainer({ user, exercises }) {
+    console.log(exercises)
     return (
         <div>
             <ExerciseForm 

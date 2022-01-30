@@ -90,7 +90,6 @@ function ExerciseForm ({ exercises, user }) {
                 <h3>Filter By:</h3>
                     <div className="category">
                         <form className="exerciseForm" onSubmit={handleSubmit}>
-                            {/* <select name="category" value={category} id="category" onChange={handleChange}> */}
                             <select name="category" id="category" onChange={handleChange}>
                             <option value="" hidden>Category</option>
                             <option value="cardio">Cardio</option>
