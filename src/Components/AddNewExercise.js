@@ -3,27 +3,27 @@ import Dashboard from "./Dashboard";
 
 function AddNewExercise() { 
     const [added, setAdded] = useState("");
-    let name = "";
-    let category = "";
-    let difficulty = "";
+    const [name, setName] = useState("");
+    const [difficulty, setDifficulty] = useState("");
+    const [category, setCategory] = useState("");
     let successText = "Thanks! Your exercise has been added to the database.";
     let errorText = "You didn't complete all the fields, please try again.";
     function handleAdd(e) {
         e.preventDefault();
         if (e.target.name === "name") {
-            name = e.target.value;
+            setName(e.target.value);
         }
         else if (e.target.name === "category") {
-            category = e.target.value;
+            setCategory(e.target.value);
         }
         else {
-            difficulty = e.target.value;
+            setDifficulty(e.target.value);
         }
     }
     function handleSubmit(e) {
         e.preventDefault();
-        if (category === "" || difficulty === "" || name === "") {
-            setAdded("false") //How do I reset the form or go back so it can be submitted once missing info is added? 
+        if (category == "" || difficulty == "" || name == "") {
+            setAdded("false") //How do I reset the form after exercise has been added?
         }
         else {
             fetch ("http://localhost:3000/exercises", {

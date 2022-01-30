@@ -180,6 +180,27 @@
       "difficulty": "advanced",
       "likes": 1,
       "id": 16
+    },
+    {
+      "name": "Stability Ball Crunches",
+      "category": "core",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 17
+    },
+    {
+      "name": "Tricep pressdowns",
+      "category": "upper body",
+      "difficulty": "intermediate",
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "Hammer curls",
+      "category": "upper body",
+      "difficulty": "intermediate",
+      "likes": 0,
+      "id": 19
     }
   ]
 }
