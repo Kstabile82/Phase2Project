@@ -28,7 +28,7 @@ const [userData, setUserData] = useState([]);
         if (inputname === "") {
             setAdded("false");
         }
-         let findMatch = userData.find(listItem => listItem.name === inputname)
+         let findMatch = userData.find(listItem => listItem.name.toLowerCase() === inputname.toLowerCase()); 
                 // if (listItem.name === inputname) { //need toLowerCase()
                 //     setUser(listItem)
                 // }

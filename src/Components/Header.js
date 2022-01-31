@@ -8,8 +8,8 @@ function Header() {
                 <h1>Get Fit!
                 </h1>
                 <nav>
-                    <NavLink exact to="/">Home</NavLink>
-                    <NavLink to="/LogIn">Log In</NavLink>
+                    <NavLink exact to="/">Home   </NavLink>
+                    <NavLink to="/LogIn">   Log In</NavLink>
                 </nav>
             </header>
         );
