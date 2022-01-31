@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Dashboard from "./Dashboard";
 import Welcomepage from "./Welcomepage";
 
-function Userpage() {
+function LogIn() {
 const [inputname, setInputName] = useState("");
+//need a Log Out if Logged In, takes back to homepage
 let goodText = "Thank you, your username has been accepted!"
 let failText = "You didn't enter anything."
 let noMatchText = "Sorry, that username isn't in our database. Please try again or create a new one."
@@ -38,7 +39,6 @@ const [userData, setUserData] = useState([]);
     function handleAdd(e) {
         e.preventDefault();
         setAdded("");
-        // name = e.target.firstChild.nextSibling.value;
         name = e.target.value;
     }
 
@@ -72,7 +72,7 @@ const [userData, setUserData] = useState([]);
             }
         }
     }
-    //use css to make the visibility of forms depend on clicked
+    //use css to make the visibility of forms depend on clicked? state for hidden? reset values?  
     return (
         <div>
             <form onSubmit={handleName}> 
@@ -96,7 +96,6 @@ const [userData, setUserData] = useState([]);
                 ></input>                
                 <button>Enter</button> 
                 {added === "true" ? <Dashboard theText={goodText} /> : null } 
-                {/* ^^how do i jump to the Header or ExerciseContainer and pass in user?  */}
                 {added === "false" ? <Dashboard theText={failText} /> : null }
                 {added === "taken" ? <Dashboard theText={takenUserName} /> : null }
             </form> 
@@ -104,4 +103,4 @@ const [userData, setUserData] = useState([]);
         </div>
     )
 }
-export default Userpage; 
+export default LogIn; 

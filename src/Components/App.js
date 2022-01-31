@@ -1,15 +1,7 @@
 import React, { useState} from "react";
 import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
-import Userpage from "./Userpage";
-// function App() {
-//   return (
-//     <div className="app">
-//       <Header />
-//     </div>
-//   );
-// }
-// export default App;
+import LogIn from "./LogIn";
 
 function App() {
   const [page, setPage] = useState("/")
@@ -17,8 +9,8 @@ function App() {
     <div className="app">
       <Header onChangePage={setPage} />
       <Switch>
-        <Route path="/userpage">
-          <Userpage />
+        <Route path="/LogIn">
+          <LogIn />
         </Route>
       </Switch>
     </div>
@@ -26,9 +18,3 @@ function App() {
 }
 export default App;
 
-
-//need a Log Out if Logged In, takes back to homepage
-//need a NavBar 
-  //Home welcome page
-  //Workout Builder (addnewex, savenewworkout)
-  //LogIn that toggles to LogOut (newUser, userpage)

@@ -259,14 +259,14 @@
       "name": "Tricep pressdowns",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 0,
+      "likes": 1,
       "id": 18
     },
     {
       "name": "Hammer curls",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 0,
+      "likes": 1,
       "id": 19
     }
   ]
