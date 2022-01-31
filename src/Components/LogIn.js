@@ -28,13 +28,22 @@ const [userData, setUserData] = useState([]);
         if (inputname === "") {
             setAdded("false");
         }
-            userData.map(listItem =>  {
-                if (listItem.name === inputname) { //need toLowerCase()
-                    setUser(listItem)
-                }
-                else {
-                }
-            })
+         let findMatch = userData.find(listItem => listItem.name === inputname)
+                // if (listItem.name === inputname) { //need toLowerCase()
+                //     setUser(listItem)
+                // }
+                 //need toLowerCase()
+                 if (findMatch !== undefined) {
+                    setUser(findMatch)
+
+                 }
+                 else {
+                     setAdded("mismatch")
+                 }
+                
+                // else if (listItem.name !== inputname && inputname !== "") {
+                //     setAdded("mismatch")
+                // }
     }
     function handleAdd(e) {
         e.preventDefault();
@@ -84,7 +93,7 @@ const [userData, setUserData] = useState([]);
                 onChange={(e) => setInputName(e.target.value)}></input>  
                 <button>Enter</button>
                 {added === "false" ? <Dashboard theText={failText} /> : null }
-                {/* {added === "mismatch" ? <Dashboard theText={noMatchText} /> : null } */}
+                {added === "mismatch" ? <Dashboard theText={noMatchText} /> : null }
             </form>
             <form onSubmit={handleSubmit}>
                 Create New User
