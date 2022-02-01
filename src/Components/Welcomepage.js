@@ -37,6 +37,7 @@ function Welcomepage({ user }) {
                     <button id="logout" name="logout" onClick={handleNext}>Log Out</button>
                 </form>
                 <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} exercises={exercises}/> : null } </div>
+                <br></br>
                 <div >{(nextStep) === "seeworkouts" ? <RenderUserWorkouts user={user} /> : null }</div>
             </div>
         )

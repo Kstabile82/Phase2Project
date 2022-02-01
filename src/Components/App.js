@@ -3,6 +3,7 @@ import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 import LogIn from "./LogIn";
 import image from './get_fit_2.jpg'
+import About from "./About";
 
 function App() {
   const [page, setPage] = useState("/")
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/LogIn">
           <LogIn />
+        </Route>
+        <Route path="/About">
+          <About />
         </Route>
       </Switch>
     </div>

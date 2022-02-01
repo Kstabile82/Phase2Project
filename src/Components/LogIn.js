@@ -87,7 +87,7 @@ const [userData, setUserData] = useState([]);
     return (
         <div>
             <form className="login" onSubmit={handleName} style={{display: loggedOut ? 'visible' : 'none' }}> 
-                User Login
+                User Login:  
                 <input 
                 type="text" 
                 id="inputname" 
@@ -98,7 +98,7 @@ const [userData, setUserData] = useState([]);
                 {added === "mismatch" ? <Dashboard theText={noMatchText} /> : null }
             </form>
             <form className="newuser" onSubmit={handleSubmit} style={{display: loggedOut ? 'visible' : 'none' }}>
-                Create New User
+                Create New User:  
                 <input 
                 type="text"
                 name="username"
