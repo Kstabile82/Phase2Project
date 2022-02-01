@@ -30,7 +30,7 @@ function Welcomepage({ user }) {
     }
     if (user.name !== undefined) {
         return (
-            <div>Welcome, {user.name}! 
+            <div className="welcomeform">Welcome, {user.name}! 
                 <form>What would you like to do?
                     <button id="createnew" name="nextsteps" onClick={handleNext}>Create a New Workout</button>
                     <button id="seeworkouts" name="nextsteps" onClick={handleNext}>See My Workout List</button>

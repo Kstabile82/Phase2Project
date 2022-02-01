@@ -33,7 +33,6 @@ h1 {
   font-size: 17px;
 }
 .Login {
-  
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -44,6 +43,12 @@ h1 {
 .Home:hover {
   background-color: #ddd;
   color: black;
+}
+.welcomeform {
+  text-align: center;
+  position: absolute;
+  top: 25em;
+  margin-left: 15em;
 }
 .Login:hover {
   background-color: #ddd;
