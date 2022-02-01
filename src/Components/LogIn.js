@@ -4,7 +4,7 @@ import Welcomepage from "./Welcomepage";
 
 function LogIn() {
 const [inputname, setInputName] = useState("");
-//need a Log Out if Logged In, takes back to homepage
+const [loggedOut, setLoggedOut] = useState(true);
 let goodText = "Thank you, your username has been accepted!"
 let failText = "You didn't enter anything."
 let noMatchText = "Sorry, that username isn't in our database. Please try again or create a new one."
@@ -35,6 +35,7 @@ const [userData, setUserData] = useState([]);
                  //need toLowerCase()
                  if (findMatch !== undefined) {
                     setUser(findMatch)
+                    setLoggedOut(false);
 
                  }
                  else {
@@ -71,9 +72,10 @@ const [userData, setUserData] = useState([]);
                 })
                 .then((r) => r.json())
                 setAdded("true");
+                setLoggedOut(false);
                 setUser({
                     "name": name, 
-                    "workouts": []
+                    "workouts": [],
                 }); 
             }
             else {
@@ -84,7 +86,7 @@ const [userData, setUserData] = useState([]);
     //use css to make the visibility of forms depend on clicked? state for hidden? reset values?  
     return (
         <div>
-            <form onSubmit={handleName}> 
+            <form className="login" onSubmit={handleName} style={{display: loggedOut ? 'visible' : 'none' }}> 
                 User Login
                 <input 
                 type="text" 
@@ -95,7 +97,7 @@ const [userData, setUserData] = useState([]);
                 {added === "false" ? <Dashboard theText={failText} /> : null }
                 {added === "mismatch" ? <Dashboard theText={noMatchText} /> : null }
             </form>
-            <form onSubmit={handleSubmit}>
+            <form className="newuser" onSubmit={handleSubmit} style={{display: loggedOut ? 'visible' : 'none' }}>
                 Create New User
                 <input 
                 type="text"

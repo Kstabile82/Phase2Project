@@ -5,9 +5,8 @@ import { useHistory } from "react-router-dom";
 
 function Welcomepage({ user }) {
   const [exercises, setExercises] = useState([]);
-  const [nextStep, setNextStep] = useState("")
+  const [nextStep, setNextStep] = useState("");
   let history = useHistory(); 
-
     useEffect(() => {
         fetch("http://localhost:3000/exercises")
         .then((r) => r.json())
@@ -29,7 +28,6 @@ function Welcomepage({ user }) {
             history.push("/home");
           }   
     }
-
     if (user.name !== undefined) {
         return (
             <div>Welcome, {user.name}! 
