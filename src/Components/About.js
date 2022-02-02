@@ -9,6 +9,8 @@ function About() {
             I wanted to create a workout generator that pulls from a database of exercises and 
             can sort and filter by category, difficulty and likes. It's easy to log in and access your saved workouts or create new ones. 
             Feel free to add an exercise, enjoy!</p>
+            <br></br>
+            <p>Please be aware that this app does not feature authenticated, password-protected logins.</p>
         </div>
     )
 }

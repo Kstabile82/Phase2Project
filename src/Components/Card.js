@@ -7,9 +7,10 @@ function Card({ exercise }) {
     }
  return (
     <div style={{display: isHidden ? 'visible' : 'none' }}>
-         <p>{exercise.name}</p>
-         <p>{exercise.difficulty}</p>
-         <p>{exercise.likes}</p>
+         <p>Name: {exercise.name}</p>
+         <p>Category: {exercise.category}</p>
+         <p>Difficulty: {exercise.difficulty}</p>
+         <p>Likes: {exercise.likes}</p>
          <button onClick={handleClick}>close</button>
      </div>
  )
