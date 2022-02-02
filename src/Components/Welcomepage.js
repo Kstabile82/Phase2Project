@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 
 function Welcomepage({ user }) {
   const [exercises, setExercises] = useState([]);
+//   const [hasWorkouts, setHasWorkouts] = useState(true);
   const [nextStep, setNextStep] = useState("");
   let history = useHistory(); 
     useEffect(() => {
@@ -14,7 +15,9 @@ function Welcomepage({ user }) {
             setExercises(currentExercises);
          });
     },[]);
-
+    // if (user.workouts) {
+    //     setHasWorkouts(false)
+    // }
     function handleNext(e) {
         e.preventDefault();
         if (e.target.id === "createnew") {
@@ -30,10 +33,11 @@ function Welcomepage({ user }) {
     }
     if (user.name !== undefined) {
         return (
-            <div className="welcomeform">Welcome, {user.name}! 
+            <div className="welcomeform">Welcome, {user.name.charAt(0).toUpperCase() + user.name.slice(1)}! 
                 <form>What would you like to do?
                     <button id="createnew" name="nextsteps" onClick={handleNext}>Create a New Workout</button>
                     <button id="seeworkouts" name="nextsteps" onClick={handleNext}>See My Workout List</button>
+                    {/* <button id="seeworkouts" name="nextsteps" style={{display: hasWorkouts ? 'visible' : 'none' }} onClick={handleNext}>See My Workout List</button> */}
                     <button id="logout" name="logout" onClick={handleNext}>Log Out</button>
                 </form>
                 <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} exercises={exercises}/> : null } </div>

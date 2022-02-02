@@ -4,6 +4,7 @@ import Card from "./Card";
 function RenderUserWorkouts({ user }) {
     const [clickedEx, setClickedEx] = useState({})
     const [clickedWorkout, setClickedWorkout] = useState("")
+   
     let userworkout = user.workouts.map(wkt => {
         return (
             <div><ul>{wkt.title}

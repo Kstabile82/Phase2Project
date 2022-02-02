@@ -29,10 +29,6 @@ const [userData, setUserData] = useState([]);
             setAdded("false");
         }
          let findMatch = userData.find(listItem => listItem.name.toLowerCase() === inputname.toLowerCase()); 
-                // if (listItem.name === inputname) { //need toLowerCase()
-                //     setUser(listItem)
-                // }
-                 //need toLowerCase()
                  if (findMatch !== undefined) {
                     setUser(findMatch)
                     setLoggedOut(false);
@@ -40,11 +36,7 @@ const [userData, setUserData] = useState([]);
                  }
                  else {
                      setAdded("mismatch")
-                 }
-                
-                // else if (listItem.name !== inputname && inputname !== "") {
-                //     setAdded("mismatch")
-                // }
+                 }       
     }
     function handleAdd(e) {
         e.preventDefault();
