@@ -56,6 +56,9 @@ body {
   margin-left: 12.5em;
   top: 11em;
 }
+.card {
+  border-style: solid; 
+}
 ul {
   list-style: none;
   margin: 0;

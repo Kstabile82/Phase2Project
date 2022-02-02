@@ -7,7 +7,7 @@ function RenderUserWorkouts({ user }) {
    
     let userworkout = user.workouts.map(wkt => {
         return (
-            <div><ul>{wkt.title}
+            <div><ul><strong>{wkt.title}</strong>
         {wkt.workout.map(ex => {
             return (
                 <div className={wkt.title}>
