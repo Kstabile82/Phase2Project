@@ -219,6 +219,11 @@
       "name": "jane",
       "workouts": [],
       "id": 110
+    },
+    {
+      "name": "Alex",
+      "workouts": [],
+      "id": 111
     }
   ],
   "exercises": [
@@ -369,6 +374,48 @@
       "difficulty": "beginner",
       "likes": 0,
       "id": 20
+    },
+    {
+      "name": "Jumping jacks",
+      "category": "cardio",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 21
+    },
+    {
+      "name": "Plyo jumps",
+      "category": "cardio",
+      "difficulty": "advanced",
+      "likes": 0,
+      "id": 23
+    },
+    {
+      "name": "Reverse lunge",
+      "category": "lower body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 24
+    },
+    {
+      "name": "Front squat",
+      "category": "lower body",
+      "difficulty": "intermediate",
+      "likes": 0,
+      "id": 25
+    },
+    {
+      "name": "Shuffle squats",
+      "category": "lower body",
+      "difficulty": "advanced",
+      "likes": 0,
+      "id": 26
+    },
+    {
+      "name": "Bench press",
+      "category": "upper body",
+      "difficulty": "intermediate",
+      "likes": 0,
+      "id": 27
     }
   ]
 }

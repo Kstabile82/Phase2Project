@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
+import Welcomepage from "./Welcomepage";
 
-function AddNewExercise() { 
+function AddNewExercise({ user }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");

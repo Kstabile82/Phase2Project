@@ -9,7 +9,7 @@ function ExerciseContainer({ user, exercises }) {
             exercises={exercises} 
             user={user}
             />
-            <AddNewExercise />
+            <AddNewExercise user={user}/>
         </div>
     );
 }

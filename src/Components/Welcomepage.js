@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 function Welcomepage({ user }) {
   const [exercises, setExercises] = useState([]);
 //   const [hasWorkouts, setHasWorkouts] = useState(true);
+
   const [nextStep, setNextStep] = useState("");
   let history = useHistory(); 
     useEffect(() => {
