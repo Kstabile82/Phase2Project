@@ -1,5 +1,5 @@
 Get Fit!
-![ Alt text](Preview. gif) / ! [](Preview). gif)
+![](Preview.gif)
 
 Description
 A workout generator that can serve various purposes to help users create workouts
