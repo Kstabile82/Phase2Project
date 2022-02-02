@@ -1,4 +1,5 @@
 Get Fit!
+
 ![](Preview.gif)  
 
 Description
@@ -24,12 +25,16 @@ exercise categories and difficulty levels. When the forms are completed and the 
 - If a user clicks the "see my workouts" button instead of the "create new workout" button, it shoudl populate lists of their stored workouts on screen. Each exercise in the lists should be clickable, and a "card" should come up showing the exercise name, difficulty, category and number of likes. The card should disappear if the user clicks the close button. 
 - If any forms are submitted incomplete, an error message should pop up on screen alerting the user that they didn't complete the fields and to try again.
 
-Visuals
-
 Support
 For support, please email karina.stabile@gmail.com
 
 Roadmap
+- Add option to set time/number of reps next to each exercise on the workout list
+- Include capability to have an exercise repeat on the list
+- Include capability to drag and drop exercises on the list to easily change the order
+- Authenticate login and create password-protected userability
+- Update exercise cards to include images -- also update Add an Exercise form to offer link for image
+- Offer option to randomize the order of the workout list
 
 Contributing
 I am open to contributions, please email me to inquire. Any editors must have React and JSON enabled. 
