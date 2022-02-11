@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 import Welcomepage from "./Welcomepage";
 
-function AddNewExercise({ user }) { 
+function AddNewExercise({ user, exercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
@@ -26,22 +26,49 @@ function AddNewExercise({ user }) {
         if (category == "" || difficulty == "" || name == "") {
             setAdded("false") //How do I reset the form after exercise has been added?
         }
-        else {
-            fetch ("http://localhost:3000/exercises", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                name,
-                category,
-                difficulty,
-                likes: 0,
-                }),
-                })
-            .then((r) => r.json())
-            setAdded("true");
-       }
+        else (exercises.map(e => {
+            if (e.name == name) {
+                console.log("Name taken")
+                setAdded("false")
+            }
+            else {
+                setAdded("true")
+                    fetch ("http://localhost:3000/exercises", {
+                        method: "POST",
+                        headers: {
+                        "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                        name,
+                        category,
+                        difficulty,
+                        likes: 0,
+                        }),
+                        })
+                    .then((r) => r.json())
+                    setAdded("true");
+               
+            }
+        })) 
+        {
+
+        }
+    //     else {
+    //         fetch ("http://localhost:3000/exercises", {
+    //             method: "POST",
+    //             headers: {
+    //             "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify({
+    //             name,
+    //             category,
+    //             difficulty,
+    //             likes: 0,
+    //             }),
+    //             })
+    //         .then((r) => r.json())
+    //         setAdded("true");
+    //    }
      }  
     return (
         <div className="add-exercise-form">

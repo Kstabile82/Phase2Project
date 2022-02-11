@@ -4,18 +4,19 @@ import RenderUserWorkouts from "./RenderUserWorkouts";
 import { useHistory } from "react-router-dom";
 
 function Welcomepage({ user }) {
-  const [exercises, setExercises] = useState([]);
+  // const [exercises, setExercises] = useState([]);
 //   const [hasWorkouts, setHasWorkouts] = useState(true);
+  let history = useHistory(); 
 
   const [nextStep, setNextStep] = useState("");
-  let history = useHistory(); 
-    useEffect(() => {
-        fetch("http://localhost:3000/exercises")
-        .then((r) => r.json())
-        .then((currentExercises) => {
-            setExercises(currentExercises);
-         });
-    },[]);
+  // let history = useHistory(); 
+  //   useEffect(() => {
+  //       fetch("http://localhost:3000/exercises")
+  //       .then((r) => r.json())
+  //       .then((currentExercises) => {
+  //           setExercises(currentExercises);
+  //        });
+  //   },[]);
     // if (user.workouts) {
     //     setHasWorkouts(false)
     // }
@@ -41,7 +42,7 @@ function Welcomepage({ user }) {
                     {/* <button id="seeworkouts" name="nextsteps" style={{display: hasWorkouts ? 'visible' : 'none' }} onClick={handleNext}>See My Workout List</button> */}
                     <button id="logout" name="logout" onClick={handleNext}>Log Out</button>
                 </form>
-                <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} exercises={exercises}/> : null } </div>
+                <div >{(nextStep) === "createnew" ? <ExerciseContainer user={user} /> : null } </div>
                 <br></br>
                 <div >{(nextStep) === "seeworkouts" ? <RenderUserWorkouts user={user} /> : null }</div>
             </div>

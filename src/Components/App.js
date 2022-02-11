@@ -1,9 +1,11 @@
 import React, { useState} from "react";
-import Header from "./Header";
+// import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 import LogIn from "./LogIn";
 import image from './get_fit_2.jpg'
 import About from "./About";
+import Header from "./Header";
+import Browse from "./Browse";
 
 function App() {
   const [page, setPage] = useState("/")
@@ -17,6 +19,9 @@ function App() {
         </Route>
         <Route path="/About">
           <About />
+        </Route>
+        <Route path="/Browse">
+          <Browse />
         </Route>
       </Switch>
     </div>

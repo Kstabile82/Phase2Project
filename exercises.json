@@ -110,6 +110,25 @@
               "likes": 4
             }
           ]
+        },
+        {
+          "title": "Arm workout",
+          "workout": [
+            {
+              "name": "Hammer curls",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "likes": 1,
+              "id": 19
+            },
+            {
+              "name": "Tricep pressdowns",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "likes": 1,
+              "id": 18
+            }
+          ]
         }
       ]
     },
@@ -126,6 +145,48 @@
           "id": 1021,
           "title": "Cardio Sculpt",
           "workout": []
+        },
+        {
+          "title": "Dex gets fit!",
+          "workout": [
+            {
+              "id": 6,
+              "category": "upper body",
+              "name": "Bicep Curls",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "intermediate",
+              "likes": 10
+            },
+            {
+              "name": "Bench press",
+              "category": "upper body",
+              "difficulty": "intermediate",
+              "likes": 0,
+              "id": 27
+            },
+            {
+              "name": "Preacher Curl",
+              "category": "upper body",
+              "difficulty": "advanced",
+              "likes": 1,
+              "id": 16
+            },
+            {
+              "name": "Stability Ball Crunches",
+              "category": "core",
+              "difficulty": "beginner",
+              "likes": 0,
+              "id": 17
+            },
+            {
+              "id": 8,
+              "category": "core",
+              "name": "Crunches",
+              "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
+              "difficulty": "intermediate",
+              "likes": 4
+            }
+          ]
         }
       ]
     },
@@ -224,6 +285,11 @@
       "name": "Alex",
       "workouts": [],
       "id": 111
+    },
+    {
+      "name": "karina12356",
+      "workouts": [],
+      "id": 112
     }
   ],
   "exercises": [
@@ -273,7 +339,7 @@
       "name": "Bicep Curls",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 9
+      "likes": 10
     },
     {
       "id": 7,
@@ -281,7 +347,7 @@
       "name": "Tricep Kickbacks",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": 8,
@@ -317,7 +383,7 @@
       "category": "upper body",
       "difficulty": "intermediate",
       "id": 12,
-      "likes": 5
+      "likes": 6
     },
     {
       "name": "Sumo Squat",
@@ -414,8 +480,92 @@
       "name": "Bench press",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 0,
+      "likes": 1,
       "id": 27
+    },
+    {
+      "name": "Shoulder press",
+      "category": "upper body",
+      "difficulty": "advanced",
+      "likes": 0,
+      "id": 28
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 29
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 30
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 31
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 32
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 33
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 34
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 35
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 36
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 37
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 38
+    },
+    {
+      "name": "Front raise",
+      "category": "upper body",
+      "difficulty": "beginner",
+      "likes": 0,
+      "id": 39
     }
   ]
 }

@@ -43,6 +43,14 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+.Browse {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 .aboutme {
   color: rgb(0, 0, 0);
   text-align: center; 
@@ -55,6 +63,12 @@ body {
   position: absolute;
   margin-left: 12.5em;
   top: 11em;
+}
+.tryit {
+  position: absolute;
+  text-align: center;
+  top: 25em;
+  margin-left: 3em;
 }
 .card {
   border-style: solid; 
