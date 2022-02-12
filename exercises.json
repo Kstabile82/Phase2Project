@@ -323,7 +323,7 @@
       "name": "Stationary Lunges",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 8
+      "likes": 11
     },
     {
       "id": 5,
@@ -339,7 +339,7 @@
       "name": "Bicep Curls",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 10
+      "likes": 11
     },
     {
       "id": 7,
@@ -417,14 +417,14 @@
       "name": "Tricep pressdowns",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 1,
+      "likes": 3,
       "id": 18
     },
     {
       "name": "Hammer curls",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 1,
+      "likes": 2,
       "id": 19
     },
     {
@@ -473,7 +473,7 @@
       "name": "Bench press",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 1,
+      "likes": 3,
       "id": 27
     },
     {
@@ -482,6 +482,13 @@
       "difficulty": "advanced",
       "likes": 0,
       "id": 28
+    },
+    {
+      "name": "Chinups",
+      "category": "upper body",
+      "difficulty": "advanced",
+      "likes": 3,
+      "id": 29
     }
   ]
 }

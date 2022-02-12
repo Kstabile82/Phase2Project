@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
-import Welcomepage from "./Welcomepage";
+import ExerciseContainer from "./ExerciseContainer";
 
-function AddNewExercise({ user, exercises }) { 
+//How do I get this to fetch the NEW exercise list so it's updated in real time? call ExerciseContainer in return?  
+//make this a button ? so if its clicked it goes to blank screen and then needs to render exercise container 
+function AddNewExercise({ exercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
@@ -26,7 +28,7 @@ function AddNewExercise({ user, exercises }) {
     function handleSubmit(e) {
         e.preventDefault();
         if (category == "" || difficulty == "" || name == "") {
-            setAdded("false") //How do I reset the form after exercise has been added?
+            setAdded("false") 
         }
         else {
         let findMatch = exercises.find(ex => ex.name.toLowerCase() === name.toLowerCase());
@@ -50,43 +52,7 @@ function AddNewExercise({ user, exercises }) {
             setAdded("taken");
         }
     }
-       
-            // else {
-            //     setAdded("true")
-            //         fetch ("http://localhost:3000/exercises", {
-            //             method: "POST",
-            //             headers: {
-            //             "Content-Type": "application/json",
-            //             },
-            //             body: JSON.stringify({
-            //             name,
-            //             category,
-            //             difficulty,
-            //             likes: 0,
-            //             }),
-            //             })
-            //         .then((r) => r.json())
-            //         setAdded("true");
-               
-            // }
-        // if (added !== "taken" && added !== "false") {
-    //         fetch ("http://localhost:3000/exercises", {
-    //             method: "POST",
-    //             headers: {
-    //             "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify({
-    //             name,
-    //             category,
-    //             difficulty,
-    //             likes: 0,
-    //             }),
-    //             })
-    //         .then((r) => r.json())
-    //         setAdded("true");
-    //    }
 }
-     
     return (
         <div className="add-exercise-form">
             <h3>Add New Exercise</h3>

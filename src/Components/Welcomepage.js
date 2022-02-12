@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; 
+import React, { useState } from "react"; 
 import ExerciseContainer from "./ExerciseContainer";
 import RenderUserWorkouts from "./RenderUserWorkouts";
 import { useHistory } from "react-router-dom";
@@ -10,13 +10,6 @@ function Welcomepage({ user }) {
 
   const [nextStep, setNextStep] = useState("");
   // let history = useHistory(); 
-  //   useEffect(() => {
-  //       fetch("http://localhost:3000/exercises")
-  //       .then((r) => r.json())
-  //       .then((currentExercises) => {
-  //           setExercises(currentExercises);
-  //        });
-  //   },[]);
     // if (user.workouts) {
     //     setHasWorkouts(false)
     // }

@@ -72,6 +72,7 @@ body {
 }
 .card {
   border-style: solid; 
+  background-color: white;
 }
 ul {
   list-style: none;

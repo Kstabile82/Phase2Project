@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-// import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 import LogIn from "./LogIn";
 import image from './get_fit_2.jpg'

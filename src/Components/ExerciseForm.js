@@ -1,6 +1,7 @@
 import React, { useState } from "react"; 
 import Dashboard from "./Dashboard"
 import SaveNewWorkout from "./SaveNewWorkout";
+import LikeBtn from "./LikeBtn";
 
 function ExerciseForm ({ exercises, user }) {   
     const [difficulty, setDifficulty] = useState("");
@@ -41,30 +42,30 @@ function ExerciseForm ({ exercises, user }) {
         }
     }
     function handleClick(e) {
-        if (e.target.className === "likes") { 
-            matches.map(match => { 
-                    if (match.name === e.target.parentNode.className) {
-                        match.likes++
-                        e.target.value++
-                        fetch (`http://localhost:3000/exercises/${match.id}`, {
-                            method: "PATCH",
-                            headers: {
-                            "Content-Type": "application/json",
-                            },
-                        body: JSON.stringify({
-                            "likes": match.likes
-                        }),
-                    })
-                    .then((r) => r.json())
-                    .then((json) => json.likes = match.likes)
-                    e.target.innerText= `Likes: ${match.likes}`
-                   }
-            })
-        }
-        else {
+    //     if (e.target.className === "likes") { 
+    //         matches.map(match => { 
+    //                 if (match.name === e.target.parentNode.className) {
+    //                     match.likes++
+    //                     e.target.value++
+    //                     fetch (`http://localhost:3000/exercises/${match.id}`, {
+    //                         method: "PATCH",
+    //                         headers: {
+    //                         "Content-Type": "application/json",
+    //                         },
+    //                     body: JSON.stringify({
+    //                         "likes": match.likes
+    //                     }),
+    //                 })
+    //                 .then((r) => r.json())
+    //                 .then((json) => json.likes = match.likes)
+    //                 e.target.innerText= `Likes: ${match.likes}`
+    //                }
+    //         })
+    // //     }
+    //     else {
             if (!addedExercises.includes(e.target.parentElement.className)) {
                 setAddedExercises([...addedExercises, e.target.parentElement.className]); 
-            }
+            // }
         }
     }
     function handleSortByLikes(e) {
@@ -116,7 +117,8 @@ function ExerciseForm ({ exercises, user }) {
                                     <ul>{matches.map(match => (
                                         <li className={match.name} key={match.id}>{match.name}
                                         <br></br>
-                                        <button className="likes" value={match.likes} onClick={handleClick}>Likes: {match.likes}</button>
+                                        <LikeBtn match={match} />
+                                        {/* <button className="likes" value={match.likes} onClick={handleClick}>Likes: {match.likes}</button> */}
                                         <button className="add" onClick={handleClick}>Add to List</button>
                                         </li>
                                         )) } </ul> 

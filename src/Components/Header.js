@@ -1,22 +1,9 @@
-import React, { useState } from "react";
-// import About from "./About";
-// import LogIn from "./LogIn";
+import React from "react";
 import { NavLink } from "react-router-dom";
-// import { useEffect } from "react";
+
 
 function Header() {
-    // const [exercises, setExercises] = useState([]);
-//   const [hasWorkouts, setHasWorkouts] = useState(true);
 
-//   const [nextStep, setNextStep] = useState("");
-//   let history = useHistory(); 
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/exercises")
-    //     .then((r) => r.json())
-    //     .then((currentExercises) => {
-    //         setExercises(currentExercises);
-    //      });
-    // },[]);
         return (
             <header style={{
                 position: 'absolute', left: '50%', top: '50%',
