@@ -365,13 +365,6 @@
       "likes": 6
     },
     {
-      "name": "Squat",
-      "category": "lower body",
-      "difficulty": "intermediate",
-      "id": 10,
-      "likes": 8
-    },
-    {
       "name": "Glute Kickbacks",
       "category": "lower body",
       "difficulty": "intermediate",
@@ -484,88 +477,11 @@
       "id": 27
     },
     {
-      "name": "Shoulder press",
+      "name": "Dumbbell pullovers",
       "category": "upper body",
       "difficulty": "advanced",
       "likes": 0,
       "id": 28
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 29
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 30
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 31
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 32
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 33
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 34
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 35
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 36
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 37
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 38
-    },
-    {
-      "name": "Front raise",
-      "category": "upper body",
-      "difficulty": "beginner",
-      "likes": 0,
-      "id": 39
     }
   ]
 }

@@ -9,10 +9,11 @@ function AddNewExercise({ user, exercises }) {
     const [category, setCategory] = useState("");
     let successText = "Thanks! Your exercise has been added to the database.";
     let errorText = "You didn't complete all the fields, please try again.";
+    let takenText = "We already have an exercise by that name in our database, please use a more specific name."
     function handleAdd(e) {
         e.preventDefault();
         if (e.target.name === "name") {
-            setName(e.target.value);
+           setName(e.target.value);
         }
         else if (e.target.name === "category") {
             setCategory(e.target.value);
@@ -21,39 +22,54 @@ function AddNewExercise({ user, exercises }) {
             setDifficulty(e.target.value);
         }
     }
+
     function handleSubmit(e) {
         e.preventDefault();
         if (category == "" || difficulty == "" || name == "") {
             setAdded("false") //How do I reset the form after exercise has been added?
         }
-        else (exercises.map(e => {
-            if (e.name == name) {
-                console.log("Name taken")
-                setAdded("false")
-            }
-            else {
-                setAdded("true")
-                    fetch ("http://localhost:3000/exercises", {
-                        method: "POST",
-                        headers: {
-                        "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                        name,
-                        category,
-                        difficulty,
-                        likes: 0,
-                        }),
-                        })
-                    .then((r) => r.json())
-                    setAdded("true");
-               
-            }
-        })) 
-        {
-
+        else {
+        let findMatch = exercises.find(ex => ex.name.toLowerCase() === name.toLowerCase());
+        if (findMatch === undefined) {
+            fetch ("http://localhost:3000/exercises", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                name,
+                category,
+                difficulty,
+                likes: 0,
+                }),
+                })
+            .then((r) => r.json())
+            setAdded("true");
+          }
+         else {
+            setAdded("taken");
         }
-    //     else {
+    }
+       
+            // else {
+            //     setAdded("true")
+            //         fetch ("http://localhost:3000/exercises", {
+            //             method: "POST",
+            //             headers: {
+            //             "Content-Type": "application/json",
+            //             },
+            //             body: JSON.stringify({
+            //             name,
+            //             category,
+            //             difficulty,
+            //             likes: 0,
+            //             }),
+            //             })
+            //         .then((r) => r.json())
+            //         setAdded("true");
+               
+            // }
+        // if (added !== "taken" && added !== "false") {
     //         fetch ("http://localhost:3000/exercises", {
     //             method: "POST",
     //             headers: {
@@ -69,13 +85,15 @@ function AddNewExercise({ user, exercises }) {
     //         .then((r) => r.json())
     //         setAdded("true");
     //    }
-     }  
+}
+     
     return (
         <div className="add-exercise-form">
             <h3>Add New Exercise</h3>
             <form onSubmit={handleSubmit}>
             {added === "true" ? <Dashboard theText={successText} /> : null }
             {added === "false" ? <Dashboard theText={errorText} /> : null}
+            {added === "taken" ? <Dashboard theText={takenText} /> : null}
                 <input onChange={handleAdd}
                 type="text"
                 name="name"
