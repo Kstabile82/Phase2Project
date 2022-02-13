@@ -290,6 +290,21 @@
       "name": "karina12356",
       "workouts": [],
       "id": 112
+    },
+    {
+      "name": "NewUser",
+      "workouts": [],
+      "id": 113
+    },
+    {
+      "name": "karina1223",
+      "workouts": [],
+      "id": 114
+    },
+    {
+      "name": "karina211",
+      "workouts": [],
+      "id": 115
     }
   ],
   "exercises": [
@@ -376,7 +391,7 @@
       "category": "upper body",
       "difficulty": "intermediate",
       "id": 12,
-      "likes": 6
+      "likes": 7
     },
     {
       "name": "Sumo Squat",
@@ -489,6 +504,20 @@
       "difficulty": "advanced",
       "likes": 3,
       "id": 29
+    },
+    {
+      "name": "Overhead press",
+      "category": "upper body",
+      "difficulty": "advanced",
+      "likes": 0,
+      "id": 30
+    },
+    {
+      "name": "Single leg deadlift",
+      "category": "lower body",
+      "difficulty": "advanced",
+      "likes": 0,
+      "id": 31
     }
   ]
 }

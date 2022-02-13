@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
-import ExerciseContainer from "./ExerciseContainer";
-
 //How do I get this to fetch the NEW exercise list so it's updated in real time? call ExerciseContainer in return?  
-//make this a button ? so if its clicked it goes to blank screen and then needs to render exercise container 
-function AddNewExercise({ exercises }) { 
+function AddNewExercise({ exercises, setExercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [category, setCategory] = useState("");
+
     let successText = "Thanks! Your exercise has been added to the database.";
     let errorText = "You didn't complete all the fields, please try again.";
     let takenText = "We already have an exercise by that name in our database, please use a more specific name."
@@ -33,6 +31,7 @@ function AddNewExercise({ exercises }) {
         else {
         let findMatch = exercises.find(ex => ex.name.toLowerCase() === name.toLowerCase());
         if (findMatch === undefined) {
+       
             fetch ("http://localhost:3000/exercises", {
                 method: "POST",
                 headers: {
@@ -47,7 +46,7 @@ function AddNewExercise({ exercises }) {
                 })
             .then((r) => r.json())
             setAdded("true");
-          }
+        }
          else {
             setAdded("taken");
         }

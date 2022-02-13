@@ -12,10 +12,12 @@ function ExerciseContainer({ user }) {
             setExercises(currentExercises);
          });
     },[]);
+    console.log(exercises)
     return (
         <div>
             <ExerciseForm 
             exercises={exercises} 
+            setExercises={setExercises}
             user={user}
             />
             <SearchExercises user={user} exercises={exercises} />

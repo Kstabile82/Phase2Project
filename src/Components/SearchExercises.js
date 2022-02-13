@@ -25,7 +25,7 @@ const [result, setResult] = useState("");
                 onChange={(e) => setExerciseName(e.target.value)}></input>  
                 <button>Enter</button>
             </form>
-            {result !== "" && result !== "none" ? <Card exercise={result} /> : null}
+            {result !== "" && result !== "none" ? <Card exercise={result} setResult={setResult} /> : null}
             {result === "none" ? <Dashboard theText={noMatches} /> : null }
         </div>
     )

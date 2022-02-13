@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import LikeBtn from "./LikeBtn";
-
-//fix card so it reopens if clicked right after closing
-//need to be able to pull up cards after first one is closed in searchexercises
-
-function Card({ exercise }) {
+function Card({ exercise, setResult }) {
     const [isShowing, setIsShowing] = useState(true);
     const card = {
         display: isShowing ? "visible" : "none",
@@ -15,6 +11,8 @@ function Card({ exercise }) {
     function handleClick(e) {
         e.preventDefault();
         setIsShowing(false);
+        setResult("")
+       
     }
 
  return (

@@ -12,7 +12,7 @@ function RenderUserWorkouts({ user }) {
             return (
                 <div className={wkt.title}>
                     <li key={ex.id} onClick={(e) => handleEx(e, ex)}>{ex.name}</li>
-                    <div key={ex.name}>{(clickedEx.name) === ex.name && clickedWorkout === wkt.title ? <Card exercise={clickedEx} /> : null }</div>
+                    <div key={ex.name}>{(clickedEx.name) === ex.name && clickedWorkout === wkt.title ? <Card exercise={clickedEx} setResult={setClickedEx} /> : null }</div>
                 </div>
             )
         })}
@@ -23,8 +23,6 @@ function RenderUserWorkouts({ user }) {
             setClickedEx(ex);
             setClickedWorkout(e.target.parentElement.className)  
         }
-        console.log(clickedWorkout)
-
     return (
         <div>{userworkout}</div>
     )
