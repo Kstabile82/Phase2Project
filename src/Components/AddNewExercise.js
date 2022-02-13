@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 //How do I get this to fetch the NEW exercise list so it's updated in real time? call ExerciseContainer in return?  
-function AddNewExercise({ exercises, setExercises }) { 
+function AddNewExercise({ exercises, addExercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
@@ -22,7 +22,12 @@ function AddNewExercise({ exercises, setExercises }) {
             setDifficulty(e.target.value);
         }
     }
-
+    let newEx = {
+        name,
+        difficulty,
+        category,
+        likes: 0 
+    }
     function handleSubmit(e) {
         e.preventDefault();
         if (category == "" || difficulty == "" || name == "") {
@@ -37,15 +42,17 @@ function AddNewExercise({ exercises, setExercises }) {
                 headers: {
                 "Content-Type": "application/json",
                 },
-                body: JSON.stringify({
-                name,
-                category,
-                difficulty,
-                likes: 0,
-                }),
+                // body: JSON.stringify({
+                // name,
+                // category,
+                // difficulty,
+                // likes: 0,
+                // }),
+                body: JSON.stringify(newEx)
                 })
             .then((r) => r.json())
             setAdded("true");
+            addExercises(newEx)
         }
          else {
             setAdded("taken");

@@ -61,14 +61,13 @@ body {
   color: rgb(0, 0, 0);
   text-align: center; 
   position: absolute;
-  margin-left: 12.5em;
+  margin-left: 12em;
   top: 11em;
 }
 .tryit {
   position: absolute;
   text-align: center;
   top: 25em;
-  margin-left: 3em;
 }
 .card {
   border-style: solid; 

@@ -518,6 +518,48 @@
       "difficulty": "advanced",
       "likes": 0,
       "id": 31
+    },
+    {
+      "name": "Lunges",
+      "difficulty": "intermediate",
+      "category": "lower body",
+      "likes": 0,
+      "id": 32
+    },
+    {
+      "name": "Walking lunges",
+      "difficulty": "intermediate",
+      "category": "lower body",
+      "likes": 0,
+      "id": 33
+    },
+    {
+      "name": "Step ups",
+      "difficulty": "beginner",
+      "category": "lower body",
+      "likes": 0,
+      "id": 34
+    },
+    {
+      "name": "Pullups",
+      "difficulty": "advanced",
+      "category": "upper body",
+      "likes": 0,
+      "id": 35
+    },
+    {
+      "name": "Concentration curl",
+      "difficulty": "advanced",
+      "category": "upper body",
+      "likes": 0,
+      "id": 36
+    },
+    {
+      "name": "Weighted tricep dips",
+      "difficulty": "advanced",
+      "category": "upper body",
+      "likes": 0,
+      "id": 37
     }
   ]
 }

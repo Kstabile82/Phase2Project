@@ -12,7 +12,6 @@ function ExerciseForm ({ exercises, user }) {
     let errorText= "You didn't complete both fields"
     const [addedExercises, setAddedExercises] = useState([]);
     const [checked, setChecked] = useState(false);
-
     function handleSubmit(e) { 
         setMatches([])
         e.preventDefault();

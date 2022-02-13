@@ -14,7 +14,7 @@ const [result, setResult] = useState("");
      if (res === undefined) {
          setResult("none")
      }
-    }  
+    } 
     return (
         <div>Search for an exercise: 
             <form className="search" onSubmit={handleSubmit}> 

@@ -4,14 +4,13 @@ import RenderUserWorkouts from "./RenderUserWorkouts";
 import { useHistory } from "react-router-dom";
 
 function Welcomepage({ user }) {
-  const [hasWorkouts, setHasWorkouts] = useState("");
+  // const [hasWorkouts, setHasWorkouts] = useState("");
   let history = useHistory(); 
 
   const [nextStep, setNextStep] = useState("");
     // if (user.workouts) {
     //     setHasWorkouts(false)
     // }
-  
     function handleNext(e) {
         e.preventDefault();
         if (e.target.id === "createnew") {
@@ -25,9 +24,7 @@ function Welcomepage({ user }) {
             history.push("/home");
           }   
     }
-
       if (user.name !== undefined) {
-        console.log(hasWorkouts)
         return (
             <div className="welcomeform">Welcome, {user.name.charAt(0).toUpperCase() + user.name.slice(1)}! 
                 <form>What would you like to do?
