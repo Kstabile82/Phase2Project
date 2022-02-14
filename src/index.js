@@ -16,11 +16,13 @@ import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 // render(<Root />, document.getElementById('root'))
 
 ReactDOM.render(
-  // <React.StrictMode>
+
     <BrowserRouter>
+   
        <App />
+
     </BrowserRouter>,
-  //  </React.StrictMode>,
+
   document.getElementById('root')
 );
 

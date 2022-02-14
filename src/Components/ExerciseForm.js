@@ -7,29 +7,31 @@ function ExerciseForm ({ exercises, user }) {
     const [difficulty, setDifficulty] = useState("");
     const [category, setCategory] = useState("");
     const [isSubmitted, setSubmitted] = useState("")
-    const [matches, setMatches] = useState([]);
-    let matchArr = [];
+    const [matches, setMatches] = useState(exercises);
+    // let matchArr = [];
     let errorText= "You didn't complete both fields"
     const [addedExercises, setAddedExercises] = useState([]);
     const [checked, setChecked] = useState(false);
     function handleSubmit(e) { 
         setMatches([])
         e.preventDefault();
+        let matchedex; 
         if (category == "" || difficulty == "") { //if either are blank, not submitted
             setSubmitted("false")
         }
         else { //is submitted
-            setSubmitted("true")
-            exercises.filter(exercise => {
+            setSubmitted("true");
+            matchedex = exercises.filter(exercise => {
                 if (exercise.category === category && exercise.difficulty === difficulty) {
                     if (!matches.includes(exercise)) {
                     //  setMatches([...matches, exercise])
-                    matchArr.push(exercise)
+                    // matchArr.push(exercise)
+                    return exercise;
                     }
                   }
               })
         }
-        setMatches(matchArr);
+        setMatches(matchedex);
     }
     function handleChange(e) { //setting the category & difficulty to match input selections
         e.preventDefault();

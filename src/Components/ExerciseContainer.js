@@ -11,7 +11,8 @@ function ExerciseContainer({ user }) {
         .then((currentExercises) => {
             setExercises(currentExercises);
          });
-    },[]);
+    },[exercises]);
+
     function addExercises(newExObj) {
         setExercises([...exercises, newExObj])
     }
@@ -19,11 +20,11 @@ function ExerciseContainer({ user }) {
         <div>
             <ExerciseForm 
             exercises={exercises} 
-            setExercises={setExercises}
+            // setExercises={setExercises}
             user={user}
             />
             <SearchExercises user={user} exercises={exercises} />
-            <AddNewExercise user={user} exercises={exercises} addExercises={addExercises}/>
+            <AddNewExercise user={user} exercises={exercises} addExercises={addExercises} setExercises={setExercises}/>
         </div>
     );
 }

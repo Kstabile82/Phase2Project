@@ -305,6 +305,21 @@
       "name": "karina211",
       "workouts": [],
       "id": 115
+    },
+    {
+      "name": "1234",
+      "workouts": [],
+      "id": 116
+    },
+    {
+      "name": "abcdef",
+      "workouts": [],
+      "id": 117
+    },
+    {
+      "name": "abcd",
+      "workouts": [],
+      "id": 118
     }
   ],
   "exercises": [
@@ -560,6 +575,76 @@
       "category": "upper body",
       "likes": 0,
       "id": 37
+    },
+    {
+      "name": "Lunge kicks",
+      "difficulty": "advanced",
+      "category": "lower body",
+      "likes": 0,
+      "id": 38
+    },
+    {
+      "name": "Plank",
+      "difficulty": "intermediate",
+      "category": "core",
+      "likes": 0,
+      "id": 39
+    },
+    {
+      "name": "Plank twist",
+      "difficulty": "advanced",
+      "category": "core",
+      "likes": 0,
+      "id": 40
+    },
+    {
+      "name": "Standing crunch",
+      "difficulty": "beginner",
+      "category": "core",
+      "likes": 0,
+      "id": 42
+    },
+    {
+      "name": "Hanging raises",
+      "difficulty": "advanced",
+      "category": "core",
+      "likes": 0,
+      "id": 43
+    },
+    {
+      "name": "newex",
+      "difficulty": "intermediate",
+      "category": "upper body",
+      "likes": 0,
+      "id": 44
+    },
+    {
+      "name": "newexercise",
+      "difficulty": "intermediate",
+      "category": "upper body",
+      "likes": 0,
+      "id": 45
+    },
+    {
+      "name": "newexer",
+      "difficulty": "intermediate",
+      "category": "lower body",
+      "likes": 0,
+      "id": 46
+    },
+    {
+      "name": "abc",
+      "difficulty": "intermediate",
+      "category": "lower body",
+      "likes": 0,
+      "id": 47
+    },
+    {
+      "name": "xyz",
+      "difficulty": "intermediate",
+      "category": "lower body",
+      "likes": 0,
+      "id": 48
     }
   ]
 }

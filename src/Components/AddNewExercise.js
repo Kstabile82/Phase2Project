@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
-//How do I get this to fetch the NEW exercise list so it's updated in real time? call ExerciseContainer in return?  
-function AddNewExercise({ exercises, addExercises }) { 
+//How do I get this to display the NEW exercise list in real time?  
+function AddNewExercise({ exercises, addExercises, setExercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
@@ -51,8 +51,10 @@ function AddNewExercise({ exercises, addExercises }) {
                 body: JSON.stringify(newEx)
                 })
             .then((r) => r.json())
+            .then(exercise => setExercises([...exercises, exercise]))
             setAdded("true");
-            addExercises(newEx)
+            // addExercises(newEx)
+        
         }
          else {
             setAdded("taken");
