@@ -612,39 +612,60 @@
       "id": 43
     },
     {
-      "name": "newex",
-      "difficulty": "intermediate",
-      "category": "upper body",
+      "name": "Single leg squat",
+      "difficulty": "advanced",
+      "category": "lower body",
       "likes": 0,
       "id": 44
     },
     {
-      "name": "newexercise",
-      "difficulty": "intermediate",
-      "category": "upper body",
+      "name": "Vertical leg press",
+      "difficulty": "advanced",
+      "category": "lower body",
       "likes": 0,
       "id": 45
     },
     {
-      "name": "newexer",
-      "difficulty": "intermediate",
-      "category": "lower body",
+      "name": "Side plank w/leg raise",
+      "difficulty": "advanced",
+      "category": "core",
       "likes": 0,
       "id": 46
     },
     {
       "name": "abc",
       "difficulty": "intermediate",
-      "category": "lower body",
+      "category": "upper body",
       "likes": 0,
       "id": 47
     },
     {
-      "name": "xyz",
-      "difficulty": "intermediate",
-      "category": "lower body",
+      "name": "Side bends",
+      "difficulty": "beginner",
+      "category": "core",
       "likes": 0,
       "id": 48
+    },
+    {
+      "name": "Knee pulls",
+      "difficulty": "beginner",
+      "category": "core",
+      "likes": 0,
+      "id": 49
+    },
+    {
+      "name": "xyz",
+      "difficulty": "intermediate",
+      "category": "upper body",
+      "likes": 0,
+      "id": 50
+    },
+    {
+      "name": "abcdef",
+      "difficulty": "intermediate",
+      "category": "upper body",
+      "likes": 0,
+      "id": 51
     }
   ]
 }

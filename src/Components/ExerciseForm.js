@@ -8,33 +8,32 @@ function ExerciseForm ({ exercises, user }) {
     const [category, setCategory] = useState("");
     const [isSubmitted, setSubmitted] = useState("")
     const [matches, setMatches] = useState(exercises);
-    // let matchArr = [];
     let errorText= "You didn't complete both fields"
     const [addedExercises, setAddedExercises] = useState([]);
     const [checked, setChecked] = useState(false);
+    let matchedEx; 
     function handleSubmit(e) { 
-        setMatches([])
+        setMatches(exercises)
         e.preventDefault();
-        let matchedex; 
         if (category == "" || difficulty == "") { //if either are blank, not submitted
             setSubmitted("false")
         }
         else { //is submitted
             setSubmitted("true");
-            matchedex = exercises.filter(exercise => {
+            matchedEx = exercises.filter(exercise => {
                 if (exercise.category === category && exercise.difficulty === difficulty) {
                     if (!matches.includes(exercise)) {
-                    //  setMatches([...matches, exercise])
-                    // matchArr.push(exercise)
                     return exercise;
                     }
                   }
               })
+              setMatches(matchedEx);
         }
-        setMatches(matchedex);
     }
+ 
     function handleChange(e) { //setting the category & difficulty to match input selections
         e.preventDefault();
+
         if (e.target.name === "category") {
             setCategory(e.target.value);
         }       
@@ -43,32 +42,11 @@ function ExerciseForm ({ exercises, user }) {
         }
     }
     function handleClick(e) {
-    //     if (e.target.className === "likes") { 
-    //         matches.map(match => { 
-    //                 if (match.name === e.target.parentNode.className) {
-    //                     match.likes++
-    //                     e.target.value++
-    //                     fetch (`http://localhost:3000/exercises/${match.id}`, {
-    //                         method: "PATCH",
-    //                         headers: {
-    //                         "Content-Type": "application/json",
-    //                         },
-    //                     body: JSON.stringify({
-    //                         "likes": match.likes
-    //                     }),
-    //                 })
-    //                 .then((r) => r.json())
-    //                 .then((json) => json.likes = match.likes)
-    //                 e.target.innerText= `Likes: ${match.likes}`
-    //                }
-    //         })
-    // //     }
-    //     else {
             if (!addedExercises.includes(e.target.parentElement.className)) {
                 setAddedExercises([...addedExercises, e.target.parentElement.className]); 
-            // }
         }
     }
+
     function handleSortByLikes(e) {
         setChecked(!checked)
         if (e.target.checked === true) {
@@ -126,7 +104,7 @@ function ExerciseForm ({ exercises, user }) {
                                     <h3>My Workout: </h3>
                                      <ul>{exerciseList}</ul>
                                         {user != undefined && exerciseList.length > 0 ? <SaveNewWorkout user={user} exerciseList={exerciseList} exercises={exercises} /> : null}
-                                 </div>
+                                 </div> 
                     </div>
            </div>
         );

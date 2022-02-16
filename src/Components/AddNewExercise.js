@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 //How do I get this to display the NEW exercise list in real time?  
-function AddNewExercise({ exercises, addExercises, setExercises }) { 
+function AddNewExercise({ exercises, setExercises }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");

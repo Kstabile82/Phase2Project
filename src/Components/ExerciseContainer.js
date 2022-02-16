@@ -12,19 +12,14 @@ function ExerciseContainer({ user }) {
             setExercises(currentExercises);
          });
     },[exercises]);
-
-    function addExercises(newExObj) {
-        setExercises([...exercises, newExObj])
-    }
     return (
         <div>
             <ExerciseForm 
             exercises={exercises} 
-            // setExercises={setExercises}
             user={user}
             />
-            <SearchExercises user={user} exercises={exercises} />
-            <AddNewExercise user={user} exercises={exercises} addExercises={addExercises} setExercises={setExercises}/>
+            <SearchExercises user={user} exercises={exercises}  />
+            <AddNewExercise user={user} exercises={exercises} setExercises={setExercises}/>
         </div>
     );
 }
