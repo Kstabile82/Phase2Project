@@ -18,7 +18,6 @@ function LikeBtn({ match }) {
                         e.target.innerText= `Likes: ${match.likes}`
                 }
             else {
-                console.log(e.target.parentNode)
             }
         }
     return (

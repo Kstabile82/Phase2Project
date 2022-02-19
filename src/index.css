@@ -101,11 +101,15 @@ ul {
   top: 25em;
   margin-left: 10em;
 }
-
 .newuser {
   position: absolute;
   top: 25em;
   margin-left: 40em;
+}
+.seeallexercises {
+  column-count: 3;
+  margin-right: 10em;
+  margin-left: 10em;
 }
 /* .login {
   position: relative;
@@ -117,10 +121,23 @@ ul {
   background-color: rgb(51, 51, 51);
   overflow: hidden;
 }  */
-
-ul {
+.listofall {
+  text-align: center;
+  white-space: normal;
+  display: block;
+  break-inside: avoid;
+}
+/* ul {
   border-style: outset;
-  margin: 20;
+  margin: 20; 
+  white-space: break-spaces;
+} */
+.seeallexercises {
+  white-space: normal;
+  border-style: outset;
+  display: block;
+  break-inside: avoid;
+
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

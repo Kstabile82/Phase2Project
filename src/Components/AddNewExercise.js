@@ -36,7 +36,7 @@ function AddNewExercise({ exercises, setExercises }) {
         else {
         let findMatch = exercises.find(ex => ex.name.toLowerCase() === name.toLowerCase());
         if (findMatch === undefined) {
-       
+        
             fetch ("http://localhost:3000/exercises", {
                 method: "POST",
                 headers: {
@@ -54,7 +54,6 @@ function AddNewExercise({ exercises, setExercises }) {
             .then(exercise => setExercises([...exercises, exercise]))
             setAdded("true");
             // addExercises(newEx)
-        
         }
          else {
             setAdded("taken");

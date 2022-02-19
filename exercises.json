@@ -329,7 +329,7 @@
       "name": "Skaters",
       "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2021/04/skater-jump-exercise-demonstration.jpg?itok=pwn1FZ3v",
       "difficulty": "intermediate",
-      "likes": 44
+      "likes": 45
     },
     {
       "id": 2,
@@ -337,7 +337,7 @@
       "name": "Burpees",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 4
+      "likes": 7
     },
     {
       "id": 3,
@@ -345,7 +345,7 @@
       "name": "Squats",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 14
+      "likes": 16
     },
     {
       "id": 4,
@@ -353,7 +353,7 @@
       "name": "Stationary Lunges",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 11
+      "likes": 15
     },
     {
       "id": 5,
@@ -361,7 +361,7 @@
       "name": "Lateral Lunges",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 9
+      "likes": 14
     },
     {
       "id": 6,
@@ -369,7 +369,7 @@
       "name": "Bicep Curls",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 11
+      "likes": 13
     },
     {
       "id": 7,
@@ -377,7 +377,7 @@
       "name": "Tricep Kickbacks",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 6
+      "likes": 7
     },
     {
       "id": 8,
@@ -385,14 +385,14 @@
       "name": "Crunches",
       "image": "https://i2.wp.com/www.fitzabout.com/wp-content/uploads/2021/04/How-to-do-Burpee-steps-guide-tips-variations-Fitzabout.jpg?resize=2048%2C1152&ssl=1",
       "difficulty": "intermediate",
-      "likes": 4
+      "likes": 5
     },
     {
       "category": "upper body",
       "name": "Pushups",
       "difficulty": "intermediate",
       "id": 9,
-      "likes": 6
+      "likes": 9
     },
     {
       "name": "Glute Kickbacks",
@@ -406,7 +406,7 @@
       "category": "upper body",
       "difficulty": "intermediate",
       "id": 12,
-      "likes": 7
+      "likes": 6
     },
     {
       "name": "Sumo Squat",
@@ -419,7 +419,7 @@
       "name": "Kettlebell Swings",
       "category": "upper body",
       "difficulty": "beginner",
-      "likes": 6,
+      "likes": 7,
       "id": 14
     },
     {
@@ -433,7 +433,7 @@
       "name": "Preacher Curl",
       "category": "upper body",
       "difficulty": "advanced",
-      "likes": 1,
+      "likes": 3,
       "id": 16
     },
     {
@@ -447,14 +447,14 @@
       "name": "Tricep pressdowns",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 3,
+      "likes": 1,
       "id": 18
     },
     {
       "name": "Hammer curls",
       "category": "upper body",
       "difficulty": "intermediate",
-      "likes": 2,
+      "likes": 3,
       "id": 19
     },
     {
@@ -524,7 +524,7 @@
       "name": "Overhead press",
       "category": "upper body",
       "difficulty": "advanced",
-      "likes": 0,
+      "likes": 1,
       "id": 30
     },
     {
@@ -559,21 +559,21 @@
       "name": "Pullups",
       "difficulty": "advanced",
       "category": "upper body",
-      "likes": 0,
+      "likes": 4,
       "id": 35
     },
     {
       "name": "Concentration curl",
       "difficulty": "advanced",
       "category": "upper body",
-      "likes": 0,
+      "likes": 2,
       "id": 36
     },
     {
       "name": "Weighted tricep dips",
       "difficulty": "advanced",
       "category": "upper body",
-      "likes": 0,
+      "likes": 1,
       "id": 37
     },
     {
@@ -631,41 +631,6 @@
       "category": "core",
       "likes": 0,
       "id": 46
-    },
-    {
-      "name": "abc",
-      "difficulty": "intermediate",
-      "category": "upper body",
-      "likes": 0,
-      "id": 47
-    },
-    {
-      "name": "Side bends",
-      "difficulty": "beginner",
-      "category": "core",
-      "likes": 0,
-      "id": 48
-    },
-    {
-      "name": "Knee pulls",
-      "difficulty": "beginner",
-      "category": "core",
-      "likes": 0,
-      "id": 49
-    },
-    {
-      "name": "xyz",
-      "difficulty": "intermediate",
-      "category": "upper body",
-      "likes": 0,
-      "id": 50
-    },
-    {
-      "name": "abcdef",
-      "difficulty": "intermediate",
-      "category": "upper body",
-      "likes": 0,
-      "id": 51
     }
   ]
 }

@@ -11,17 +11,18 @@ function Card({ exercise, setResult }) {
     function handleClick(e) {
         e.preventDefault();
         setIsShowing(false);
-        setResult("")
-       
+        if (setResult) {
+            setResult("")
+        }
+        // setResult("");
     }
-
  return (
     <div className="card" id={exercise.name} style={card}> 
          <p>Name: {exercise.name}</p>
          <p>Category: {exercise.category.charAt(0).toUpperCase() + exercise.category.slice(1)}</p>
          <p>Difficulty: {exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1)}</p> 
+         <button className="close" id="closed" onClick={handleClick}>close</button> 
          <LikeBtn match={exercise} />
-         <button onClick={handleClick}>close</button>    
      </div>
  )
 }

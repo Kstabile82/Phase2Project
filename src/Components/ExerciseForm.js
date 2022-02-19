@@ -1,20 +1,22 @@
 import React, { useState } from "react"; 
 import Dashboard from "./Dashboard"
-import SaveNewWorkout from "./SaveNewWorkout";
-import LikeBtn from "./LikeBtn";
 
-function ExerciseForm ({ exercises, user }) {   
+import LikeBtn from "./LikeBtn";
+import MyWorkoutList from "./MyWorkoutList";
+
+function ExerciseForm ({ exercises, user, addedExercises, setAddedExercises, handleClick }) {   
     const [difficulty, setDifficulty] = useState("");
     const [category, setCategory] = useState("");
     const [isSubmitted, setSubmitted] = useState("")
     const [matches, setMatches] = useState(exercises);
     let errorText= "You didn't complete both fields"
-    const [addedExercises, setAddedExercises] = useState([]);
+    // const [addedExercises, setAddedExercises] = useState([]);
     const [checked, setChecked] = useState(false);
     let matchedEx; 
     function handleSubmit(e) { 
         setMatches(exercises)
         e.preventDefault();
+        // setUnfiltered(false);
         if (category == "" || difficulty == "") { //if either are blank, not submitted
             setSubmitted("false")
         }
@@ -41,12 +43,11 @@ function ExerciseForm ({ exercises, user }) {
             setDifficulty(e.target.value);
         }
     }
-    function handleClick(e) {
-            if (!addedExercises.includes(e.target.parentElement.className)) {
-                setAddedExercises([...addedExercises, e.target.parentElement.className]); 
-        }
-    }
-
+    // function handleClick(e) {
+    //         if (!addedExercises.includes(e.target.parentElement.className)) {
+    //             setAddedExercises([...addedExercises, e.target.parentElement.className]); 
+    //     }
+    // }
     function handleSortByLikes(e) {
         setChecked(!checked)
         if (e.target.checked === true) {
@@ -56,19 +57,19 @@ function ExerciseForm ({ exercises, user }) {
             matches.sort((a,b) => (a.id > b.id) ? 1 : -1)
         }
     }
-    function handleDelete(e) {
-        let newList = addedExercises.filter(item => item + "x" !== e.target.parentNode.innerText)
-        setAddedExercises(newList)
-    }
-    let exerciseList = addedExercises.map(addedEx => 
-        <li key={addedEx} name={addedEx}>{addedEx} 
-        <button id={addedEx} className="delete" onClick={handleDelete}>x</button>
-        </li> 
-    );
+    // function handleDelete(e) {
+    //     let newList = addedExercises.filter(item => item + "x" !== e.target.parentNode.innerText)
+    //     setAddedExercises(newList)
+    // }
+    // let exerciseList = addedExercises.map(addedEx => 
+    //     <li key={addedEx} name={addedEx}>{addedEx} 
+    //     <button id={addedEx} className="delete" onClick={handleDelete}>x</button>
+    //     </li> 
+    // );
         return (
             <div>
-                <h3>Filter By:</h3>
                     <div className="category">
+                    <h4>Filter exercises:</h4>
                         <form className="exerciseForm" onSubmit={handleSubmit}>
                             <select name="category" id="category" onChange={handleChange}>
                             <option value="" hidden>Category</option>
@@ -101,75 +102,15 @@ function ExerciseForm ({ exercises, user }) {
                                         <button className="add" onClick={handleClick}>Add to List</button>
                                         </li>
                                         )) } </ul> 
-                                    <h3>My Workout: </h3>
+                                        <MyWorkoutList addedExercises={addedExercises} user={user} exercises={exercises} setAddedExercises={setAddedExercises} />
+                                    {/* <h3>My Workout: </h3>
                                      <ul>{exerciseList}</ul>
                                         {user != undefined && exerciseList.length > 0 ? <SaveNewWorkout user={user} exerciseList={exerciseList} exercises={exercises} /> : null}
-                                 </div> 
-                    </div>
+                                 </div>  */}
+                                </div>
+                        </div>
            </div>
         );
 }
 
 export default ExerciseForm; 
-
-// function ExerciseForm ({ exercises, user }) {   
-//     const [difficulty, setDifficulty] = useState("");
-//     const [category, setCategory] = useState("");
-//     const [isSubmitted, setSubmitted] = useState(""); 
-//     let theText= "You didn't complete both fields"
-//     function handleSubmit(e) {
-//         e.preventDefault();
-//         if (category != "" && difficulty != "") {
-//             setSubmitted("true")
-//         }
-//         else {
-//             setSubmitted("false") 
-//         }
-//     }
-//     function handleChange(e) {
-//         e.preventDefault();
-//         if (e.target.name === "category") {
-//             setCategory(e.target.value);
-//         }       
-//         else {
-//             setDifficulty(e.target.value);
-//         }
-//     }
-//     //fix form so that it clears each time its been submitted
-//         return (
-//             <div>
-//                 <h4>Filter By:</h4>
-//                     <div className="category">
-//                         <form className="exerciseForm" onSubmit={handleSubmit}>
-//                             {/* <select name="category" value={category} id="category" onChange={handleChange}> */}
-//                             <select name="category" id="category" onChange={handleChange}>
-//                             <option value="" hidden>Category</option>
-//                             <option value="cardio">Cardio</option>
-//                             <option value="upper body">Upper Body</option>
-//                             <option value="lower body">Lower Body</option>
-//                             <option value="core">Core</option>
-//                         </select>
-//                             <select name="difficulty" id="difficulty" onChange={handleChange}>
-//                             <option value="" hidden>Difficulty</option>
-//                             <option value="beginner">Beginner</option>
-//                             <option value="intermediate">Intermediate</option>
-//                             <option value="advanced">Advanced</option>
-//                         </select>
-//                         <br></br>
-//                         <button>Submit</button>
-//                         <div>
-//                             {isSubmitted === "true" ? <FilterResults 
-//                                 category={category} 
-//                                 difficulty={difficulty}
-//                                 isSubmitted={isSubmitted} 
-//                                 exercises={exercises}
-//                                 user={user} /> : null}
-//                             {isSubmitted === "false" ? <Dashboard theText={theText} /> : null}
-//                         </div>
-//                     </form>
-//                     </div>
-//                     <br></br>
-//            </div>
-//         );
-// }
-// export default ExerciseForm; 

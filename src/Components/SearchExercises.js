@@ -16,7 +16,8 @@ const [result, setResult] = useState("");
      }
     } 
     return (
-        <div>Search for an exercise: 
+        <div>
+            <h4>Search for an exercise by name:</h4>
             <form className="search" onSubmit={handleSubmit}> 
                 <input 
                 type="text" 
