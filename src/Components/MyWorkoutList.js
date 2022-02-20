@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SaveNewWorkout from "./SaveNewWorkout";
 
 function MyWorkoutList({ addedExercises, user, exercises, setAddedExercises }) {

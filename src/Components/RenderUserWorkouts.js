@@ -16,6 +16,7 @@ function RenderUserWorkouts({ user }) {
                 </div>
             )
         })}
+        <br></br>
         </ul></div>
         )
     })

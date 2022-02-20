@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 //How do I get this to display the NEW exercise list in real time?  
-function AddNewExercise({ exercises, setExercises }) { 
+function AddNewExercise({ exercises, setExercises, matches, setMatches }) { 
     const [added, setAdded] = useState("");
     const [name, setName] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [category, setCategory] = useState("");
-
     let successText = "Thanks! Your exercise has been added to the database.";
     let errorText = "You didn't complete all the fields, please try again.";
     let takenText = "We already have an exercise by that name in our database, please use a more specific name."
@@ -53,7 +52,6 @@ function AddNewExercise({ exercises, setExercises }) {
             .then((r) => r.json())
             .then(exercise => setExercises([...exercises, exercise]))
             setAdded("true");
-            // addExercises(newEx)
         }
          else {
             setAdded("taken");

@@ -132,7 +132,7 @@ ul {
   margin: 20; 
   white-space: break-spaces;
 } */
-.seeallexercises {
+.exerciseContainer {
   white-space: normal;
   border-style: outset;
   display: block;

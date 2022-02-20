@@ -440,7 +440,7 @@
       "name": "Stability Ball Crunches",
       "category": "core",
       "difficulty": "beginner",
-      "likes": 0,
+      "likes": 1,
       "id": 17
     },
     {
@@ -545,7 +545,7 @@
       "name": "Walking lunges",
       "difficulty": "intermediate",
       "category": "lower body",
-      "likes": 0,
+      "likes": 1,
       "id": 33
     },
     {
@@ -559,7 +559,7 @@
       "name": "Pullups",
       "difficulty": "advanced",
       "category": "upper body",
-      "likes": 4,
+      "likes": 5,
       "id": 35
     },
     {
@@ -587,7 +587,7 @@
       "name": "Plank",
       "difficulty": "intermediate",
       "category": "core",
-      "likes": 0,
+      "likes": 2,
       "id": 39
     },
     {
@@ -631,6 +631,20 @@
       "category": "core",
       "likes": 0,
       "id": 46
+    },
+    {
+      "name": "New",
+      "difficulty": "beginner",
+      "category": "core",
+      "likes": 0,
+      "id": 47
+    },
+    {
+      "name": "New2",
+      "difficulty": "advanced",
+      "category": "upper body",
+      "likes": 0,
+      "id": 48
     }
   ]
 }
